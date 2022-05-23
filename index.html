@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"
+    integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>My navbar</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <ul>
+      <li class="list active">
+        <a href="#">
+          <span class="icon"><i class="fa-solid fa-house"></i></span>
+          <span class="taxt">Home</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="fa-solid fa-image"></i></span>
+          <span class="taxt">Gallary</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+          <span class="taxt">Massage</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="fa-solid fa-phone"></i></span>
+          <span class="taxt">Call</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="fa-solid fa-gear"></i></span>
+          <span class="taxt">Setting</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+  <script>
+    const list = document.querySelectorAll(".list");
+    function activeLink(){
+      list.forEach((item) =>
+        item.classList.remove("active"));
+      this.classList.add("active");
+    }
+    list.forEach((item) =>
+      item.addEventListener("click", activeLink));
+  </script>
+</body>
+
+</html>
